@@ -11,13 +11,9 @@ import { AppInputComponent } from "./components/input/input";
   styleUrl: './app.component.scss',
 })
 
-export class AppComponent {
-  username: string = '';
-  password: string = '';
-}
 
 export class App {
-  protected readonly title = signal('UTF-Check');
+protected readonly title = signal('UTF-Check');
 password: any;
 username: any;
 }
