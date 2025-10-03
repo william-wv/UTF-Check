@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-button',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './button.html',
-  styleUrl: './button.scss'
+  styleUrls: ['./button.scss']
 })
-export class Button {
-
+export class AppButtonComponent {
+  @Input() label: string = 'Enviar';
+  @Input() color: 'primary' | 'secondary' | 'danger' = 'primary';
 }
