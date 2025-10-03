@@ -15,3 +15,5 @@ export class AppInputComponent {
   @Input() type: string = 'text';
   @Input() value: string = '';
 }
+export { Input };
+
