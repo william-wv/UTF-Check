@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tab',
   imports: [],
   templateUrl: './tab.html',
-  styleUrl: './tab.scss'
+  styleUrl: './tab.scss',
 })
 export class Tab {
-
+  @Input() text = '';
 }
