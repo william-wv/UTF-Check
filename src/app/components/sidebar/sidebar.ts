@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { Tab } from './tab/tab';
 import { Router, RouterLink } from '@angular/router';
 
