@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import { GeneralPage } from './pages/general-page/general-page';
 import { ProfilePage } from './pages/profile-page/profile-page';
-import { StartingPage } from './pages/starting-page/starting-page';
+import { Login } from './pages/login/login';
+
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'starting',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
@@ -18,7 +19,7 @@ export const routes: Routes = [
     component: ProfilePage,
   },
   {
-    path: 'starting',
-    component: StartingPage,
-  },
+    path: 'login',
+    component: Login,
+  }
 ];

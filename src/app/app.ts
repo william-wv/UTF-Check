@@ -19,9 +19,6 @@ import { Card } from './components/card/card';
   // 2. Array de 'imports' COMBINADO com todos os itens
   imports: [
     RouterOutlet,
-    CardMainComponent,
-    AppInputComponent,
-    AppButtonComponent
 ],
   
   templateUrl: './app.component.html', 
