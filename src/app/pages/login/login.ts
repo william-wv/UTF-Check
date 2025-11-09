@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet, RouterLink } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -12,23 +12,20 @@ import { AppButtonComponent } from "../../components/buttons/button/button";
   selector: 'app-login',
   standalone: true,
   templateUrl: './login.html',
-
   imports: [
     CommonModule,
     FormsModule,
     AppInputComponent,
-    AppButtonComponent
-  ]
+    AppButtonComponent,
+    RouterOutlet,  
+    RouterLink,   
+  ],
 })
 export class Login {
-
   username = '';
   password = '';
 
-  constructor(
-    private auth: AuthService,
-    private router: Router
-  ) {}
+  constructor(private auth: AuthService, private router: Router) {}
 
   async login() {
     const isValid = await this.auth.login(this.username, this.password);
@@ -39,5 +36,4 @@ export class Login {
       alert('Usuário ou senha inválidos');
     }
   }
-
 }
