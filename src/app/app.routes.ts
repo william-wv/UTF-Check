@@ -3,7 +3,6 @@ import { GeneralPage } from './pages/general-page/general-page';
 import { ProfilePage } from './pages/profile-page/profile-page';
 import { Login } from './pages/login/login';
 
-
 export const routes: Routes = [
   {
     path: '',

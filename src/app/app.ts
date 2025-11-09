@@ -1,35 +1,18 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RouterOutlet_1 as RouterOutlet } from "../../node_modules/.pnpm/@angular+router@20.3.10_@angular+common@20.3.10_@angular+core@20.3.10_@angular+compiler_5b8ed3cd2f3b2fa3b99e33fd408b035d/node_modules/@angular/router/router_module.d";
 
-// --- Imports de todas as suas versões ---
-import { Header } from './components/header/header';
-import { Sidebar } from './components/sidebar/sidebar';
-// Corrigi o nome do import com base no seu uso (estava 'CardMain')
-import { CardMainComponent } from './components/cards/card-main/card-main'; 
-import { AppButtonComponent } from "./components/buttons/button/button";
-import { AppInputComponent } from "./components/input/input";
-import { Modal } from './components/modal /modal';
-import { Card } from './components/card/card';
-
-// 1. APENAS UM decorador @Component
 @Component({
   selector: 'app-root',
-  standalone: true, // Componentes com 'imports' são standalone
-  
-  // 2. Array de 'imports' COMBINADO com todos os itens
-  imports: [
-    RouterOutlet,
-],
-  
-  templateUrl: './app.component.html', 
-  styleUrl: './app.component.scss',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  imports: [RouterOutlet, RouterOutlet_1],
 })
-
-export class App { 
-
-  protected readonly title = signal('UTF-Check');
-  password: any;
-  username: any;
+export class App {
+  title = signal('UTF-Check');
+  password = '';
+  username = '';
   isModalVisible = false;
   modalTitle = '';
 

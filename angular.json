@@ -42,8 +42,8 @@
               }
             ],
             "styles": [
-              "src/tailwind.css",
               "src/styles.scss",
+              "src/assets/output.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ]
           },
@@ -110,7 +110,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/tailwind.css",
+              "src/assets/output.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ]
           }

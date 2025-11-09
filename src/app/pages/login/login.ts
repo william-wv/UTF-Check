@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { AuthService } from '../../services/auth.service';
 import { AppInputComponent } from "../../components/input/input";
 import { AppButtonComponent } from "../../components/buttons/button/button";
@@ -9,7 +12,13 @@ import { AppButtonComponent } from "../../components/buttons/button/button";
   selector: 'app-login',
   standalone: true,
   templateUrl: './login.html',
-  imports: [AppInputComponent, AppButtonComponent]
+
+  imports: [
+    CommonModule,
+    FormsModule,
+    AppInputComponent,
+    AppButtonComponent
+  ]
 })
 export class Login {
 
@@ -19,7 +28,7 @@ export class Login {
   constructor(
     private auth: AuthService,
     private router: Router
-  ) { }
+  ) {}
 
   async login() {
     const isValid = await this.auth.login(this.username, this.password);
